@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 56" fill="none">
+  <title>MonChalet</title>
+  <path d="M24 2C12.4 2 3 11.2 3 22.6 3 37.4 24 54 24 54s21-16.6 21-31.4C45 11.2 35.6 2 24 2Z" fill="#1F4D3A"/>
+  <circle cx="34.5" cy="14" r="3.2" fill="#E8964A"/>
+  <path d="M24 11.5 37 31H11L24 11.5Z" fill="#F7F1E6"/>
+  <path d="M24 17.5 32.2 30H15.8L24 17.5Z" fill="#C9763A"/>
+  <path d="M21 31v-5.2a3 3 0 0 1 6 0V31" fill="#1F4D3A"/>
+  <rect x="9" y="30.5" width="30" height="3" rx="1.5" fill="#F7F1E6"/>
+  <text x="56" y="37" font-family="Fraunces, Georgia, serif" font-size="27" fill="#1F4D3A">
+    <tspan font-weight="400">Mon</tspan><tspan font-weight="700" fill="#C9763A">Chalet</tspan>
+  </text>
+</svg>

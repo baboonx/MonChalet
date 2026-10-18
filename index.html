@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MonChalet — Location de chalets au Québec</title>
+  <meta name="description" content="Trouvez et réservez le chalet parfait au Québec : bord de l'eau, spa, près des pistes. Propriétaires, louez votre chalet en toute simplicité.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <!-- Héros + recherche -->
+    <section class="hero">
+      <div class="hero__bg" style="background-image:url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=2000&q=80')"></div>
+      <div class="container hero__content">
+        <span class="hero__eyebrow" id="hero-count">Chalets vérifiés partout au Québec</span>
+        <h1>Votre prochaine escapade commence <em>au chalet</em>.</h1>
+        <p class="lead">Bord de l'eau, pied des pistes ou au fond des bois : réservez directement auprès de propriétaires passionnés.</p>
+
+        <form class="search-bar" action="chalets.html" method="get" role="search">
+          <div class="field">
+            <label for="s-region">Destination</label>
+            <select class="select" id="s-region" name="region"></select>
+          </div>
+          <div class="field">
+            <label for="s-arrivee">Arrivée</label>
+            <input class="input" type="date" id="s-arrivee" name="arrivee">
+          </div>
+          <div class="field">
+            <label for="s-depart">Départ</label>
+            <input class="input" type="date" id="s-depart" name="depart">
+          </div>
+          <div class="field">
+            <label for="s-voyageurs">Voyageurs</label>
+            <select class="select" id="s-voyageurs" name="voyageurs"></select>
+          </div>
+          <button class="btn btn--primary" type="submit"></button>
+        </form>
+
+        <div class="hero-stats">
+          <div><strong id="stat-chalets">—</strong><span>chalets à louer</span></div>
+          <div><strong id="stat-note">—</strong><span>note moyenne des séjours</span></div>
+          <div><strong id="stat-regions">—</strong><span>régions du Québec</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catégories rapides -->
+    <section class="section" style="padding-top:48px">
+      <div class="container">
+        <div class="chips" id="categories"></div>
+      </div>
+    </section>
+
+    <!-- Chalets en vedette -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Coups de cœur</span>
+            <h2>Chalets en vedette</h2>
+            <p>Les chalets les mieux notés par nos voyageurs cette saison.</p>
+          </div>
+          <a class="link-arrow" href="chalets.html">Voir tous les chalets <span id="arrow-1"></span></a>
+        </div>
+        <div class="grid-cards" id="featured"></div>
+      </div>
+    </section>
+
+    <!-- Régions -->
+    <section class="section" id="regions">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Destinations</span>
+            <h2>Explorer par région</h2>
+            <p>Des Laurentides à la Gaspésie, trouvez le coin de pays qui vous ressemble.</p>
+          </div>
+        </div>
+        <div class="regions" id="region-list"></div>
+      </div>
+    </section>
+
+    <!-- Comment ça marche -->
+    <section class="section" id="comment">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Simple comme bonjour</span>
+            <h2>Comment ça marche</h2>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step__num">1</div>
+            <h3>Cherchez</h3>
+            <p>Filtrez par région, dates, nombre de chambres et équipements pour trouver le chalet idéal.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <h3>Réservez</h3>
+            <p>Consultez les photos, les avis et le prix total sans surprise, puis envoyez votre demande au propriétaire.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <h3>Profitez</h3>
+            <p>Recevez les instructions d'arrivée et laissez-vous gagner par le calme du chalet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Propriétaires -->
+    <section class="section" id="proprietaires">
+      <div class="container">
+        <div class="owner-cta">
+          <div class="owner-cta__text">
+            <span class="eyebrow" style="color:var(--sun)">Propriétaires</span>
+            <h2>Votre chalet mérite d'être découvert.</h2>
+            <p>Publiez votre annonce gratuitement et rejoignez une communauté de propriétaires qui louent en toute confiance.</p>
+            <ul id="owner-perks"></ul>
+            <div><a class="btn btn--light btn--lg" href="#proprietaires" id="owner-btn">Publier mon chalet</a></div>
+          </div>
+          <div class="owner-cta__img" style="background-image:url('https://images.unsplash.com/photo-1595521624992-48a59aef95e3?auto=format&fit=crop&w=1200&q=75')"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script>
+    (function () {
+      const { CHALETS, REGIONS } = MC_DATA;
+      MC.renderChrome("accueil");
+
+      // Recherche
+      MC.fillRegionSelect(document.getElementById("s-region"), "");
+      const maxGuests = Math.max(...CHALETS.map(c => c.voyageurs));
+      const guests = document.getElementById("s-voyageurs");
+      guests.innerHTML = '<option value="">Ajouter</option>' +
+        Array.from({ length: maxGuests }, (_, i) => '<option value="' + (i + 1) + '">' + MC.plural(i + 1, "voyageur", "voyageurs") + "</option>").join("");
+      MC.wireDates(document.getElementById("s-arrivee"), document.getElementById("s-depart"));
+      document.querySelector(".search-bar .btn").innerHTML = MC.icon("search") + "Rechercher";
+
+      // Le formulaire n'envoie que les champs remplis
+      document.querySelector(".search-bar").addEventListener("submit", e => {
+        e.preventDefault();
+        const params = new URLSearchParams();
+        new FormData(e.target).forEach((v, k) => { if (v) params.set(k, v); });
+        location.href = "chalets.html" + (params.toString() ? "?" + params : "");
+      });
+
+      // Statistiques
+      const avg = CHALETS.reduce((s, c) => s + c.note, 0) / CHALETS.length;
+      document.getElementById("stat-chalets").textContent = CHALETS.length;
+      document.getElementById("stat-note").innerHTML = avg.toFixed(1).replace(".", ",") + " ★";
+      document.getElementById("stat-regions").textContent = REGIONS.length;
+      document.getElementById("hero-count").innerHTML = MC.icon("shield") + "Chalets vérifiés partout au Québec";
+
+      // Catégories
+      const cats = [
+        { label: "Bord de l'eau", icon: "waves", q: "equip=lac" },
+        { label: "Avec spa", icon: "spa", q: "equip=spa" },
+        { label: "Près des pistes", icon: "mountain", q: "equip=ski" },
+        { label: "Animaux acceptés", icon: "paw", q: "equip=animaux" },
+        { label: "Foyer au bois", icon: "flame", q: "equip=foyer" },
+        { label: "Grands groupes (8+)", icon: "users", q: "voyageurs=8" },
+        { label: "Moins de 200 $ / nuit", icon: "home", q: "prixMax=200" }
+      ];
+      document.getElementById("categories").innerHTML = cats.map(c =>
+        '<a class="chip" href="chalets.html?' + c.q + '">' + MC.icon(c.icon) + c.label + "</a>").join("");
+
+      // Vedettes
+      const featured = CHALETS.filter(c => c.vedette).sort((a, b) => b.note - a.note).slice(0, 6);
+      document.getElementById("featured").innerHTML = featured.map(c => MC.card(c)).join("");
+      document.getElementById("arrow-1").outerHTML = MC.icon("arrow");
+
+      // Régions
+      document.getElementById("region-list").innerHTML = REGIONS.map(r => {
+        const n = CHALETS.filter(c => c.region === r.id).length;
+        return '<a class="region" href="chalets.html?region=' + r.id + '">' +
+          '<img src="' + MC.img(r.image, 600) + '" alt="" loading="lazy">' +
+          '<div class="region__text"><h3>' + r.nom + "</h3><span>" + MC.plural(n, "chalet", "chalets") + "</span></div></a>";
+      }).join("");
+
+      // Avantages propriétaires
+      const perks = ["Inscription gratuite, sans engagement", "Calendrier et tarifs gérés par vous", "Paiements sécurisés et voyageurs vérifiés"];
+      document.getElementById("owner-perks").innerHTML = perks.map(p => "<li>" + MC.icon("check") + p + "</li>").join("");
+      document.getElementById("owner-btn").addEventListener("click", e => {
+        e.preventDefault();
+        MC.toast("L'espace propriétaire arrive bientôt !");
+      });
+    })();
+  </script>
+</body>
+</html>

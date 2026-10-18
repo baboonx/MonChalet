@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chalet — MonChalet</title>
+  <meta name="description" content="Détails du chalet : photos, équipements, chambres, avis et réservation.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container" id="detail"></main>
+
+  <!-- Visionneuse de photos -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photos du chalet">
+    <span class="lightbox__count" id="lb-count"></span>
+    <button class="lightbox__btn lightbox__close" id="lb-close" aria-label="Fermer"></button>
+    <button class="lightbox__btn lightbox__prev" id="lb-prev" aria-label="Photo précédente"></button>
+    <img id="lb-img" alt="">
+    <button class="lightbox__btn lightbox__next" id="lb-next" aria-label="Photo suivante"></button>
+  </div>
+
+  <!-- Confirmation de demande -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__box">
+      <div class="icon-circle" id="modal-icon"></div>
+      <h2 id="modal-title">Demande envoyée !</h2>
+      <p id="modal-text"></p>
+      <div class="modal__summary" id="modal-summary"></div>
+      <button class="btn btn--forest btn--block" id="modal-close">Parfait</button>
+    </div>
+  </div>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trouver un chalet — MonChalet</title>
+  <meta name="description" content="Recherchez parmi nos chalets à louer au Québec : filtrez par région, prix, nombre de chambres et équipements.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <div class="page-head">
+      <div class="container">
+        <form class="search-bar" id="top-search" role="search">
+          <div class="field">
+            <label for="f-region">Destination</label>
+            <select class="select" id="f-region"></select>
+          </div>
+          <div class="field">
+            <label for="f-arrivee">Arrivée</label>
+            <input class="input" type="date" id="f-arrivee">
+          </div>
+          <div class="field">
+            <label for="f-depart">Départ</label>
+            <input class="input" type="date" id="f-depart">
+          </div>
+          <div class="field">
+            <label for="f-voyageurs">Voyageurs</label>
+            <select class="select" id="f-voyageurs"></select>
+          </div>
+          <button class="btn btn--primary" type="submit" id="top-search-btn">Rechercher</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container listing">
+      <aside class="filters" id="filters" aria-label="Filtres">
+        <div class="filters__head">
+          <h2>Filtres</h2>
+          <button class="link-btn" type="button" id="reset">Tout effacer</button>
+        </div>
+
+        <div class="filter-group">
+          <h3><label for="f-q">Mots-clés</label></h3>
+          <input class="input" type="search" id="f-q" placeholder="Nom, ville…">
+        </div>
+
+        <div class="filter-group">
+          <h3><label for="f-prix">Prix maximum par nuit</label></h3>
+          <input type="range" id="f-prix" min="100" max="700" step="25">
+          <div class="range-row"><span>100 $</span><strong id="f-prix-val"></strong></div>
+        </div>
+
+        <div class="filter-group">
+          <h3 id="lbl-chambres">Chambres</h3>
+          <div class="seg" id="f-chambres" role="group" aria-labelledby="lbl-chambres"></div>
+        </div>
+
+        <div class="filter-group">
+          <h3 id="lbl-sdb">Salles de bain</h3>
+          <div class="seg" id="f-sdb" role="group" aria-labelledby="lbl-sdb"></div>
+        </div>
+
+        <div class="filter-group">
+          <h3 id="lbl-pieces">Nombre de pièces</h3>
+          <div class="seg" id="f-pieces" role="group" aria-labelledby="lbl-pieces"></div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Type de chalet</h3>
+          <div class="check-list" id="f-types"></div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Équipements</h3>
+          <div class="check-list" id="f-equip"></div>
+        </div>
+
+        <div class="filter-group">
+          <label class="check"><input type="checkbox" id="f-favoris"> <span>Mes favoris seulement</span></label>
+        </div>
+
+        <div class="filter-group filters-close-wrap">
+          <button class="btn btn--forest btn--block filters-toggle" type="button" id="filters-close">Voir les chalets</button>
+        </div>
+      </aside>
+      <div class="filters-backdrop" id="filters-backdrop"></div>
+
+      <section aria-live="polite">
+        <div class="results-bar">
+          <div>
+            <h1 id="results-title">Chalets</h1>
+            <p id="results-sub"></p>
+          </div>
+          <div class="results-tools">
+            <button class="btn btn--ghost filters-toggle" type="button" id="filters-open"></button>
+            <label class="sr-only" for="f-tri">Trier par</label>
+            <select class="select" id="f-tri">
+              <option value="reco">Recommandés</option>
+              <option value="prix-asc">Prix croissant</option>
+              <option value="prix-desc">Prix décroissant</option>
+              <option value="note">Meilleures notes</option>
+              <option value="capacite">Capacité</option>
+            </select>
+          </div>
+        </div>
+        <div class="active-filters" id="active-filters"></div>
+        <div class="grid-cards" id="results"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/listing.js"></script>
+</body>
+</html>
